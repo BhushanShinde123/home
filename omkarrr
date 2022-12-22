@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            link
+        </title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll no</th>
+                    <th>name</th>
+                    <th>surname</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>78</td>
+                    <td>OMkar</td>
+                    <td>shihnde</td>
+                </tr>
+                <tr>
+                    <td>75</td>
+                    <td>prit</td>
+                    <td>patel</td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+    </body>
+</html>
