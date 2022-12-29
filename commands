@@ -1,0 +1,91 @@
+In VS code :
+
+1) public Folder
+  index.html : make html code
+  
+2) Docker file :
+      FROM node:7
+      WORKDIR /app
+      COPY package.json /app
+      RUN npm install
+      COPY . /app
+      CMD node server.js
+      EXPOSE 8081
+      
+3) package.json : (npm init)
+
+4) package-lock.json : (npm install express)
+
+5) server.js :
+
+      var express = require('express');
+      var app = express();
+      var path=require("path");
+      var fs=require("fs");
+  //server configuration
+  app.use(express.static(path.join(__dirname,'public')));
+  app.get('/', function (req, res) {
+   res.sendFile(path.join(___dirname + '/index.html'));
+});
+  
+  var server = app.listen(8081, function () {
+  var host = server.address().address
+  var port = server.address().port
+  console.log("Example app listening at http://localhost:8081", host, port)
+})
+
+6) .gitignore : /node_modules
+
+For checking running code : node server.js
+
+----------------------------------------------------------------------
+
+For new instance on AWS :
+
+EC2 dashboard -> Instance -> Lanch Instance -> 
+    Name - (....)
+    key pair - 
+        - Name > (...)
+        - .ppk
+    Network Setting -
+        - Allow HTTP traffic
+    Lanch Instance 
+    In sucess click on click
+    select instance connect connect
+    Security -
+        security groups
+              Edit inbound rules
+                      All tcp 
+                      Anywhere IPV4
+                      
+-------------------------------------------------------------------
+
+on linux cmd :
+
+sudo yum update
+git -v
+sudo yum install git
+yes
+docker -v
+sudo yum install docker
+yes
+git clone (repo path)
+using ls and cd goto the 'folder'
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker images
+sudo docker build -t 'folder' .
+sudo docker run -d -p 8081:8081 'folder'
+sudo docker ps
+
+on chrome paste ip:8081
+---------------------------------------------
+
+
+
+
+
+
+
+
+
