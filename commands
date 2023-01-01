@@ -81,7 +81,7 @@ sudo docker rmi 'folder' -f (for kill images)
 sudo docker ps (for kill container)
 
 on chrome paste ip:8081
----------------------------------------------
+----------------------------------------------------------------
 
 
 
