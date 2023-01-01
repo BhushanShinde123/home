@@ -77,6 +77,8 @@ sudo docker images
 sudo docker build -t 'folder' .
 sudo docker run -d -p 8081:8081 'folder'
 sudo docker ps
+sudo docker rmi 'folder' -f (for kill images)
+sudo docker ps (for kill container)
 
 on chrome paste ip:8081
 ---------------------------------------------
