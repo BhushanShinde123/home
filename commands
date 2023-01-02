@@ -83,6 +83,10 @@ sudo docker ps (for kill container)
 on chrome paste ip:8081
 ----------------------------------------------------------------
 
+For putty :
+Host Name : Local IP
+Data : Username : ec2-user
+SSH : Auth :Crentials : browse : ppk file :open
 
 
 
