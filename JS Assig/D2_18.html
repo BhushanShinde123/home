@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+        <script>
+            function calculate(){
+                var str=(document.getElementById("str").value);
+
+                var v=document.getElementById("mydiv");
+                var uppercase=str.toUpperCase();
+                v.innerHTML="uppercase--->"+str.toUpperCase()+"<br>";
+
+                //document.write("uppercase--->"+str.toUpperCase()+"<br>");
+
+
+            }
+        </script>
+    </head>
+    <body>
+        
+        Enter String : <input type="text" id="id1"></input><br>
+        Enter Sub String : <input type="text" id="id2"></input><br>
+        Replace with String : <input type="text" id="txt"></input><br>
+
+        <input type="radio" name="operation" id="btn"><label for="btn">Search substring in main String</label></button>
+        <input type="radio" name="operation" id="btn1"><label for="btn1">To Upper case</label></button>
+        <input type="radio" name="operation" id="btn2"><label for="btn2">To Lower case</label></button>
+        <input type="radio" name="operation" id="btn3"><label for="btn3">Trim spaces</label></button>
+        <input type="radio" name="operation" id="btn4"><label for="btn4">Concatenate</label></button>
+        <input type="radio" name="operation" id="btn5"><label for="btn5">Replace</label></button><br>
+
+        <button type="button" name="btn" id="btn6" onclick="calculate()">Submit Query</button>
+        <div id="mydiv">
+
+        </div>
+    
+
+
+    </body>
+</html>

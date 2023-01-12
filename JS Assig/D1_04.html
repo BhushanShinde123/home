@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calculate(event){
+
+            num1=parseInt(document.getElementById("num1").value)
+            num2=parseInt(document.getElementById("num2").value)
+
+            switch(event.target.id){
+
+                case "add" :
+                    res=num1+num2;
+                    break;
+
+                case "sub" :
+                    res=num1-num2;
+                    break;
+
+                case "divi" :
+                    res=num1/num2;
+                    break;
+
+                case "multi" :
+                    res=num1*num2;
+                    break;
+            }
+
+            document.getElementById("result").innerHTML=res;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Num 1 :</td>
+            <td>
+                <input type="number" id="num1">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Num 2 :</td>
+            <td>
+                <input type="number" id="num2">
+            </td>
+        </tr>
+
+        <tr>
+            <table>
+        <tr>
+            <td>
+                <button type="button" id="add" name="btn" onclick="calculate(event)">+</button>
+            </td>
+            <td>
+                <button type="button" id="sub" name="btn" onclick="calculate(event)">-</button>
+            </td>
+            <td>
+                <button type="button" id="divi" name="btn" onclick="calculate(event)">/</button>
+            </td>
+            <td>
+                <button type="button" id="multi" name="btn" onclick="calculate(event)">*</button>
+            </td>
+        </tr>
+            </table>
+        </tr>
+
+        <tr>
+            <td colspan="2"><div id="result"</td>
+        </tr>
+    </table>
+</body>
+</html>

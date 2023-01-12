@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function showsum(){
+            num=parseInt(document.getElementById("num").value);
+            sum=0;
+            while(num!=0){
+                num1=parseInt(num%10);
+                sum+=num1;
+                num=parseInt(num/10);
+            }
+            document.getElementById("result").innerHTML=sum;
+        }
+    </script>
+</head>
+<body>
+    Enter Number :<input type="number" id="num">
+    <button type="button" onclick="showsum()" id="btn">Show Sum</button>
+    <div id="result"></div>
+</body>
+</html>

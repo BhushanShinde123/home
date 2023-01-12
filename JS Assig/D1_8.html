@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function power(){
+            var base=(document.getElementById("base").value);
+            var power=(document.getElementById("power").value);
+            //ans=Math.pow(base,power);
+            var i=1;
+            var result=1;
+            while(i<=power){
+                result=base*result;
+                i++;
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter a Base[x]:</td>
+            <td><input type="number" id="base"</td>
+            <td>Enter a Power[y]:</td>
+            <td><input type="number" id="power"</td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" onclick="power()">(x^(y))</button></td>
+        </tr>
+    </table> 
+    Result : <div id="result"></div>   
+</body>
+</html>

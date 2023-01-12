@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+
+        //validate whether name contains only spaces
+        function validateName(){
+            var nm=document.getElementById("nm").value;
+            
+            if(nm.trim().length>0){
+             
+                document.getElementById("errnm").innerHTML="";
+                return true;
+            }
+            else{
+        
+                document.getElementById("errnm").innerHTML="pls enter valid name";
+                return false;
+
+            }
+        }
+
+        function validateGender(){
+            var genarr=document.getElementsByName("gender");
+            for(var i=0;i<genarr.length;i++){
+                if(genarr[i].checked){
+                document.getElementById("errgen").innerHTML="";
+                return true;
+                }
+            }
+            document.getElementById("errgen").innerHTML="gender has to be selected";
+            return false;
+
+        }
+
+        function validatehobbies(){
+            var hobbyarr=document.getElementsByName("hobbies");
+            let count=0;
+            for(var i=0;i<hobbyarr.length;i++){
+                if(hobbyarr[i].checked){
+                    count++;
+                    if(count>=3){
+                        document.getElementById("errhobby").innerHTML="";
+                        return true;
+                    }
+                }
+            }
+            document.getElementById("errhobby").innerHTML="pls select min 3 hobbies";
+            return false;
+
+        }
+
+        function validateData(){
+            alert("validate");
+            flag=validateName();
+            flag1=validateGender();
+            flag2=validatehobbies();
+
+            if(flag && flag1 && flag2){
+                return true;
+            }
+                else{ 
+                return false;
+            }
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <table border="2">
+        <form onsubmit="return validateData()">
+            <tr>
+                <td>
+                    <label for="nm">Name :</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="nm" required>
+                </td>
+                <td id="errnm"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dt">Date :</label>
+                </td>
+                <td>
+                    <input type="date" name="dt" id="dt">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mob">Mobile :</label>
+                </td>
+                <td>
+                    <input type="text" name="mob" id="mob" size="10">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="addr">Address :</label>
+                </td>
+                <td>
+                    <textarea rows="5" cols="20" name="addr" id="addr"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="gender">Gender :</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                </td>
+                <td id="errgen"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Degree">Degree</label></td>
+                <td>
+                    <input type="radio" name="Degree" id="BE" value="BE">
+                    <label for="BE">BE</label>
+                    <input type="radio" name="Degree" id="Btech" value="Btech">
+                    <label for="Btech">Btech</label>
+                    <input type="radio" name="Degree" id="MSC" value="MSC">
+                    <label for="MSC">MSC</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="hobbies">Hobbies</label></td>
+                <td>
+                    <input type="checkbox" name="hobbies" id="Reading" values="Reading">
+                    <label for="Reading">Reading</label>
+                    <input type="checkbox" name="hobbies" id="biking" values="biking">
+                    <label for="biking">biking</label>
+                    <input type="checkbox" name="hobbies" id="trekking" values="trekking">
+                    <label for="trekking">trekking</label>
+                    <input type="checkbox" name="hobbies" id="sleeping" values="sleeping">
+                    <label for="sleeping">Reading</label>
+                </td>
+                <td id="errhobby"></td>
+            </tr>
+
+            <tr>
+                <td><label for="city">City</label></td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="1">---select One---</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Nashik">Nashik</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Nagpur">Nagpur</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" name="btn" id="btn" value="submit">Register user</button>
+                    <button type="reset" name="btn" id="btn1" value="clear">clear form</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

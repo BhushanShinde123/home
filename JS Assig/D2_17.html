@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            #mydiv1{
+                border :solid black
+                
+                
+            }
+
+
+        </style>
+
+
+        <script>
+            function calculate(){
+                var n=parseInt(document.getElementById("txt").value);
+
+                var v=document.getElementById("mydiv");
+                var area=3.14*n*n;
+                v.innerHTML=`Area : ${3.14*n*n}`+"<br>";
+
+                var circumference=2*3.14*n;
+                v.innerHTML+=`circumference : ${2*3.14*n}`;
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div id="mydiv1">
+        <form>
+            Enter Radius : <input type="text" id="txt"></input>
+            <br>
+            <button type="button" id="btn" onclick="calculate()">Display</button>
+        </form>
+
+        <div id="mydiv"></div>
+    </div>
+    </body>
+</html>

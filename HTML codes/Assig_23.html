@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calloanpayment(){
+            var loanamt=parseFloat(document.getElementById("loanant").value);
+            var roi=parseFloat(document.getElementById("roi").value);
+            var period=parseFloat(document.getElementById("period").value);
+
+            document.getElementById("mydiv").innerHTML="";
+            document.getElementById("mthpay").value="";
+            document.getElementById("totalpay").value="";
+            document.getElementById("intpay").value="";
+            
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <h2>Enter Loan Information :</h2>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1)Amount of loan (any currency) :</td>
+            <td><input type="text" name="loanamt" id="loanant" autofocus required</td>
+        </tr>
+
+        <tr>
+            <td>2)Annual percentage rate of interest :</td>
+            <td><input type="text" name="roi" id="roi" required</td>
+        </tr>
+
+        <tr>
+            <td>3) Repayment period in years :</td>
+            <td><input type="number" name="period" id="period" required></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="button" id="btn" name="btn" onclick="calloanpayment()">Compute</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>Payment Information</h2>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4)Your monthly payment will be :</td>
+            <td>
+                <input type="text" name="mthpay" id="mthpay" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5)Your total payment will be :</td>
+            <td>
+                <input type="text" name="totalpay" id="totalpay" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6)Your interest payment will be :</td>
+            <td>
+                <input type="text" name="intpay" id="intpay" readonly>
+            </td>
+        </tr>
+    </table>
+
+    <div id="mydiv"></div>
+
+</body>
+</html>

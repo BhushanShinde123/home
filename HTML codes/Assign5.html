@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <table bgcolor="pink" border="2" height="1000px" width="1000px" cellspacing="3px" cellpadding="3px">
+
+        <form>
+            <tr>
+                <td><label for="nm">Name</label></td>
+                <td><input type="text" name="name" id="nm" min="3" max="10" required placeholder="Enter Name" autofocus></td>
+            </tr>
+
+            <tr>
+                <td><label for="emp">Employee Code</label></td>
+                <td><input type="text" name="empid" id="emp" minlength="5" maxlength="10"></td>
+            </tr>
+
+            <tr>
+                <td><label for="Dept">Department</label></td>
+                <td>
+                    <input type="radio" name="Dept" id="ADMIN"><label for="ADMIN">ADMIN</label><br>
+                    <input type="radio" name="Dept" id="HR"><label for="HR">HR</label><br>
+                    <input type="radio" name="Dept" id="TECHNICAL"><label for="TECHNICAL">TECHNICAL</label><br>
+                    <input type="radio" name="Dept" id="ACCOUNTS"><label for="ACCOUNTS">ACCOUNTS</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="Date of Joining">Date of Joining</label></td>
+                <td>
+                    <input type="number" name="dd" id="day" min="1" max="31"> <b>/</b>
+                    <input type="number" name="mm" id="month" min="1" max="12"> <b>/</b>
+                    <input type="number" name="yy" id="year" min="1" max="10000"><br>
+                    &nbsp;  &nbsp; dd &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  mm &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; yyyy
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Address</label></td>
+                <td>
+                    <textarea rows="5" cols="20" name="addr" id="addr" style="resize: none" placeholder="Enter here"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="Traning">Tranning Programs Attended</label></td>
+                <td>
+                    <input type="checkbox" name="Traning" id="html" values="html">
+                    <label for="html">HTML/DHTML</label><br>
+                    <input type="checkbox" name="Traning" id="java" values="java">
+                    <label for="java">JAVA</label><br>
+                    <input type="checkbox" name="Traning" id="client" values="client">
+                    <label for="client">CLIENT/SERVER</label><br>
+                    <input type="checkbox" name="Traning" id=".net" values=".net">
+                    <label for=".net">.NET</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><lable for="Traning Prog">Traning Prog. need to attend</lable></td>
+                <td>
+                    <select>
+                        <option value="JAVASCRIPT">JAVASCRIPT</option>
+                        <option value="JSTRUTS">JSTRUTS</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Send the information at</td>
+                <td>
+                    <a href="empinfo@patni.com">empinfo@patni</a>
+                </td>
+            </tr>
+
+ </form>
+    </table>
+
+    <button type="submit " name="btn " id="btn " value="submit ">Register user</button>
+    <button type="reset " name="btn " id="btn1 " value="clear ">clear form</button></td>
+
+
+</body>
+</html>

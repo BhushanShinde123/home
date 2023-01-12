@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h3>Finding minimum Argument</h3>
+<script>
+    function min(...args){
+        ans=args.reduce((acc,num)=>{return acc > num ? num : acc})
+        document.write("Function min" + "(" + args + ")" + "<br><h6> Minimum argument is =</h6>" + ans );
+    }
+    min(5,3,8,1,4,9,10);
+    document.write("<br><br>")
+    min(56,20,3);
+</script>
+<body>
+    
+</body>
+</html>

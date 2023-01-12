@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function displyData(){
+            var Order_ID=document.getElementById("id").value;
+            var name=document.getElementById("name").value;
+            var billdate=document.getElementById("bdate").value;
+            var shipdate=document.getElementById("sdate").value;
+            var total=document.getElementById("total").value; 
+            var str="";
+
+            document.getElementById("valnm").innerHTML="";
+            document.getElementById("valdate").innerHTML="";
+
+            if(name.length<6){
+                document.getElementById("valnm").innerHTML="Customer name cannot be < 6 Character";
+                return;
+            }
+            else{
+                document.getElementById("valnm").innerHTML="";
+            }
+
+            if(billdate>shipdate){
+                document.getElementById("valdate").innerHTML="Billing date cannot be greater than Shipping date";
+                return;
+            }
+            else{
+                document.getElementById("valdate").innerHTML="";
+            }
+
+            str+="Order Id :"+Order_ID+"<br>customer Name :"+name+"<br>Billing Date :"+billdate+"<br>Shipping Date :"+shipdate+"<br>Total :"+total;
+            // openWindow=window.open();
+            // openWindow.document.write(str);
+            document.innerHTML=str;
+            //display_message.innerHTML= str;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Order ID :</label>
+        <input type="text" id="id" name="id" required autofocus><br><br>
+
+        <label>Cust name :</label>
+        <input type="text" id="name" name="name" required>
+        <label id="valnm" style="color: red;"></label><br><br>
+
+        <label>Enter Billing date :</label>
+        <input type="date" id="bdate" name="bdate" required>
+        <label id="valdate" style="color: red;"></label><br><br>
+
+        <label>Enter Shipping date :</label>
+        <input type="date" id="sdate" name="sdate" required><br><br>
+
+        <label>Order total :</label>
+        <input type="text" id="total" name="total" required><br><br>
+
+        <button type="submit" id="btn" name="btn" onclick="displyData()">Display</button>
+
+        <p> Message is: <span id = "display_message"></span> </p>
+     </form>
+</body>
+</html>

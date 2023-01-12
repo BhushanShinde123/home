@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function table(){
+            num=parseInt(document.getElementById("num").value);
+            var t=1;
+            while(t<=10){
+                result=t*num;
+                document.getElementById("result").innerHTML+=num+"x"+t+"="+result+"<br>";
+                t++;
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    Enter Number :<input type="number" name="num" id="num">
+    <button type="button" id="btn" name="btn" onclick="table()">Show Table</button>
+    <div id="result"></div>
+</body>
+</html>
