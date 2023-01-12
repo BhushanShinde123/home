@@ -1,0 +1,13 @@
+create folder client 
+create folder server
+
+in client :
+        npx install create-react-app .
+        npm install axios
+        npm start
+        
+in server :
+        npm init
+        npm install mysql express
+        npm install cors
+        create file :index.js
